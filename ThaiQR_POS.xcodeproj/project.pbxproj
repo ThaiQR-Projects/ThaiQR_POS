@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F00296DB076000CB1F3 /* ThaiQR_POSApp.swift */; };
-		620D9F03296DB076000CB1F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F02296DB076000CB1F3 /* ContentView.swift */; };
+		620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F02296DB076000CB1F3 /* HelloWorldView.swift */; };
 		620D9F05296DB078000CB1F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620D9F04296DB078000CB1F3 /* Assets.xcassets */; };
 		620D9F09296DB078000CB1F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620D9F08296DB078000CB1F3 /* Preview Assets.xcassets */; };
 		620D9F13296DB078000CB1F3 /* ThaiQR_POSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F12296DB078000CB1F3 /* ThaiQR_POSTests.swift */; };
 		620D9F1D296DB078000CB1F3 /* ThaiQR_POSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F1C296DB078000CB1F3 /* ThaiQR_POSUITests.swift */; };
 		620D9F1F296DB078000CB1F3 /* ThaiQR_POSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F1E296DB078000CB1F3 /* ThaiQR_POSUITestsLaunchTests.swift */; };
+		620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F2D296DB282000CB1F3 /* QR_Generator.swift */; };
+		620D9F32296DB459000CB1F3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 620D9F31296DB459000CB1F3 /* CodeScanner */; };
+		620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F33296DB492000CB1F3 /* QR_Scanner.swift */; };
+		620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F35296DC346000CB1F3 /* AppTester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		620D9EFD296DB076000CB1F3 /* ThaiQR_POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThaiQR_POS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		620D9F00296DB076000CB1F3 /* ThaiQR_POSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaiQR_POSApp.swift; sourceTree = "<group>"; };
-		620D9F02296DB076000CB1F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		620D9F02296DB076000CB1F3 /* HelloWorldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldView.swift; sourceTree = "<group>"; };
 		620D9F04296DB078000CB1F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620D9F06296DB078000CB1F3 /* ThaiQR_POS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThaiQR_POS.entitlements; sourceTree = "<group>"; };
 		620D9F08296DB078000CB1F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +49,10 @@
 		620D9F18296DB078000CB1F3 /* ThaiQR_POSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThaiQR_POSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		620D9F1C296DB078000CB1F3 /* ThaiQR_POSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaiQR_POSUITests.swift; sourceTree = "<group>"; };
 		620D9F1E296DB078000CB1F3 /* ThaiQR_POSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaiQR_POSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		620D9F2D296DB282000CB1F3 /* QR_Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Generator.swift; sourceTree = "<group>"; };
+		620D9F33296DB492000CB1F3 /* QR_Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Scanner.swift; sourceTree = "<group>"; };
+		620D9F35296DC346000CB1F3 /* AppTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTester.swift; sourceTree = "<group>"; };
+		620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ThaiQR-POS-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620D9F32296DB459000CB1F3 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +104,10 @@
 		620D9EFF296DB076000CB1F3 /* ThaiQR_POS */ = {
 			isa = PBXGroup;
 			children = (
+				620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */,
 				620D9F00296DB076000CB1F3 /* ThaiQR_POSApp.swift */,
-				620D9F02296DB076000CB1F3 /* ContentView.swift */,
+				620D9F2F296DB3A6000CB1F3 /* PageViews */,
+				620D9F2C296DB22A000CB1F3 /* ElementViews */,
 				620D9F04296DB078000CB1F3 /* Assets.xcassets */,
 				620D9F06296DB078000CB1F3 /* ThaiQR_POS.entitlements */,
 				620D9F07296DB078000CB1F3 /* Preview Content */,
@@ -129,6 +140,24 @@
 			path = ThaiQR_POSUITests;
 			sourceTree = "<group>";
 		};
+		620D9F2C296DB22A000CB1F3 /* ElementViews */ = {
+			isa = PBXGroup;
+			children = (
+				620D9F2D296DB282000CB1F3 /* QR_Generator.swift */,
+				620D9F33296DB492000CB1F3 /* QR_Scanner.swift */,
+			);
+			path = ElementViews;
+			sourceTree = "<group>";
+		};
+		620D9F2F296DB3A6000CB1F3 /* PageViews */ = {
+			isa = PBXGroup;
+			children = (
+				620D9F35296DC346000CB1F3 /* AppTester.swift */,
+				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
+			);
+			path = PageViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +174,9 @@
 			dependencies = (
 			);
 			name = ThaiQR_POS;
+			packageProductDependencies = (
+				620D9F31296DB459000CB1F3 /* CodeScanner */,
+			);
 			productName = ThaiQR_POS;
 			productReference = 620D9EFD296DB076000CB1F3 /* ThaiQR_POS.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +249,9 @@
 				Base,
 			);
 			mainGroup = 620D9EF4296DB076000CB1F3;
+			packageReferences = (
+				620D9F30296DB459000CB1F3 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 620D9EFE296DB076000CB1F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				620D9F03296DB076000CB1F3 /* ContentView.swift in Sources */,
+				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
+				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
 				620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */,
+				620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */,
+				620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +457,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ThaiQR-POS-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The Camera is use for QR code scanning only.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -437,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "MattJunk.ThaiQR-POS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,6 +497,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ThaiQR-POS-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The Camera is use for QR code scanning only.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -475,7 +517,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "MattJunk.ThaiQR-POS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,6 +654,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		620D9F30296DB459000CB1F3 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		620D9F31296DB459000CB1F3 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 620D9F30296DB459000CB1F3 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 620D9EF5296DB076000CB1F3 /* Project object */;
 }

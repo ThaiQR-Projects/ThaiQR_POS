@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct ThaiQR_POSApp: App {
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            
+            AppTester()
         }
     }
 }
