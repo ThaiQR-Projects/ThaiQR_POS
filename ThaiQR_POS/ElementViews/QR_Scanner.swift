@@ -20,14 +20,22 @@ struct QR_Scanner: View {
         VStack{
             if Debug{
                 HStack{
-                    Text("ScanedVal: "+ScanedVal)
+                    Text("ScanedVal: \(ScanedVal)")
                     Spacer()
                 }.padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 0))
                 
+                HStack{
+                    Spacer()
+                    Button("Copy"){
+                    let pasteboard = UIPasteboard.general
+                        pasteboard.string = ScanedVal
+                    }
+                    
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 24))
             }
             ZStack{
                 
-                    CodeScannerView(codeTypes: [.qr], scanMode: aScanMode, simulatedData: "This is the simulated data", completion: HandleScan)
+                CodeScannerView(codeTypes: [.qr], scanMode: aScanMode, simulatedData: "This is the simulated data", completion: HandleScan).ignoresSafeArea()
                 
                 Text("โปรดส่องไปที่สลิป\nเพื่อตรวจสอบ").font(.system(.largeTitle))
                     .multilineTextAlignment(.center)

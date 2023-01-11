@@ -18,7 +18,7 @@ struct QR_Generator: View {
                             .frame(width: Size, height: Size)
             if Debug{
                 HStack{
-                    Text("Text: "+QR_String).font(.system(.footnote))
+                    Text("Text: \(QR_String)").font(.system(.footnote))
                     Spacer()
                 }.frame(maxWidth: Size)
                     .padding(EdgeInsets(top: -12, leading: 0, bottom: 0, trailing: 0))
@@ -44,4 +44,3 @@ struct QR_Generator_Previews: PreviewProvider {
         QR_Generator(QR_String: "Hello", Debug: true)
     }
 }
-

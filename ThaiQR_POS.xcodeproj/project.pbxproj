@@ -18,6 +18,9 @@
 		620D9F32296DB459000CB1F3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 620D9F31296DB459000CB1F3 /* CodeScanner */; };
 		620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F33296DB492000CB1F3 /* QR_Scanner.swift */; };
 		620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F35296DC346000CB1F3 /* AppTester.swift */; };
+		628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED09296F0E0B004FCEAE /* Slip.swift */; };
+		628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0B296F0E2F004FCEAE /* Extensions.swift */; };
+		628EED0E296F0E48004FCEAE /* CRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0D296F0E48004FCEAE /* CRC.swift */; };
 		62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		620D9F33296DB492000CB1F3 /* QR_Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Scanner.swift; sourceTree = "<group>"; };
 		620D9F35296DC346000CB1F3 /* AppTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTester.swift; sourceTree = "<group>"; };
 		620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ThaiQR-POS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		628EED09296F0E0B004FCEAE /* Slip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
+		628EED0B296F0E2F004FCEAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		628EED0D296F0E48004FCEAE /* CRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC.swift; sourceTree = "<group>"; };
 		62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_Circle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +114,7 @@
 			children = (
 				620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */,
 				620D9F00296DB076000CB1F3 /* ThaiQR_POSApp.swift */,
+				628EED04296F0D3A004FCEAE /* Models */,
 				620D9F2F296DB3A6000CB1F3 /* PageViews */,
 				620D9F2C296DB22A000CB1F3 /* ElementViews */,
 				620D9F04296DB078000CB1F3 /* Assets.xcassets */,
@@ -159,6 +166,16 @@
 				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
 			);
 			path = PageViews;
+			sourceTree = "<group>";
+		};
+		628EED04296F0D3A004FCEAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				628EED09296F0E0B004FCEAE /* Slip.swift */,
+				628EED0B296F0E2F004FCEAE /* Extensions.swift */,
+				628EED0D296F0E48004FCEAE /* CRC.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */,
 				62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */,
 				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
+				628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */,
 				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
+				628EED0E296F0E48004FCEAE /* CRC.swift in Sources */,
 				620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */,
 				620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */,
 				620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */,
