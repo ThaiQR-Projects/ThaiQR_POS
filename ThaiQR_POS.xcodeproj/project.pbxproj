@@ -21,6 +21,7 @@
 		628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED09296F0E0B004FCEAE /* Slip.swift */; };
 		628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0B296F0E2F004FCEAE /* Extensions.swift */; };
 		628EED0E296F0E48004FCEAE /* CRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0D296F0E48004FCEAE /* CRC.swift */; };
+		628EED13296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c in Sources */ = {isa = PBXBuildFile; fileRef = 628EED12296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c */; };
 		62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,9 @@
 		628EED09296F0E0B004FCEAE /* Slip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
 		628EED0B296F0E2F004FCEAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		628EED0D296F0E48004FCEAE /* CRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC.swift; sourceTree = "<group>"; };
+		628EED10296F0F30004FCEAE /* ThaiQR_POS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThaiQR_POS-Bridging-Header.h"; sourceTree = "<group>"; };
+		628EED11296F0F30004FCEAE /* CRC-16_CCITT-FALSE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRC-16_CCITT-FALSE.h"; sourceTree = "<group>"; };
+		628EED12296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CRC-16_CCITT-FALSE.c"; sourceTree = "<group>"; };
 		62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_Circle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,11 +175,22 @@
 		628EED04296F0D3A004FCEAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				628EED0F296F0F10004FCEAE /* C */,
 				628EED09296F0E0B004FCEAE /* Slip.swift */,
 				628EED0B296F0E2F004FCEAE /* Extensions.swift */,
 				628EED0D296F0E48004FCEAE /* CRC.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		628EED0F296F0F10004FCEAE /* C */ = {
+			isa = PBXGroup;
+			children = (
+				628EED11296F0F30004FCEAE /* CRC-16_CCITT-FALSE.h */,
+				628EED12296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c */,
+				628EED10296F0F30004FCEAE /* ThaiQR_POS-Bridging-Header.h */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +264,7 @@
 				TargetAttributes = {
 					620D9EFC296DB076000CB1F3 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					620D9F0D296DB078000CB1F3 = {
 						CreatedOnToolsVersion = 14.2;
@@ -319,6 +335,7 @@
 				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
 				628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */,
 				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
+				628EED13296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c in Sources */,
 				628EED0E296F0E48004FCEAE /* CRC.swift in Sources */,
 				620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */,
 				620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */,
@@ -473,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThaiQR_POS/ThaiQR_POS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -503,6 +521,8 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ThaiQR_POS/Models/C/ThaiQR_POS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -513,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThaiQR_POS/ThaiQR_POS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -543,6 +564,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ThaiQR_POS/Models/C/ThaiQR_POS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

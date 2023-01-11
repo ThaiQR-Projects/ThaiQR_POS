@@ -16,7 +16,7 @@ struct Loading_Circle: View {
                 .stroke(Color.blue, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                 .frame(width: 40, height: 40)
                 .rotationEffect(Angle(degrees: appear ? 360 : 0))
-                .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false))
+                .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false), value: appear)
                 .onAppear {
                     appear = true
                 }
