@@ -18,6 +18,7 @@
 		620D9F32296DB459000CB1F3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 620D9F31296DB459000CB1F3 /* CodeScanner */; };
 		620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F33296DB492000CB1F3 /* QR_Scanner.swift */; };
 		620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F35296DC346000CB1F3 /* AppTester.swift */; };
+		62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		620D9F33296DB492000CB1F3 /* QR_Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Scanner.swift; sourceTree = "<group>"; };
 		620D9F35296DC346000CB1F3 /* AppTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTester.swift; sourceTree = "<group>"; };
 		620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ThaiQR-POS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_Circle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				620D9F2D296DB282000CB1F3 /* QR_Generator.swift */,
 				620D9F33296DB492000CB1F3 /* QR_Scanner.swift */,
+				62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */,
 			);
 			path = ElementViews;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */,
 				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
 				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
 				620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */,
