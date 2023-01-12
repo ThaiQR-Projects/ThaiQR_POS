@@ -13,25 +13,37 @@ struct QR_Scanner: View {
     @Binding var ScanedVal: String
     @State var Debug = false
     @State var aScanMode = ScanMode.once
-    @State var aOpacityOn = true
+    @State var aOpacityOn = false
     @State var aColor = Color.blue
     //Result<ScanResult, ScanError>
     var body: some View {
         VStack{
             if Debug{
-                HStack{
-                    Text("ScanedVal: \(ScanedVal)")
-                    Spacer()
-                }.padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 0))
-                
-                HStack{
-                    Spacer()
-                    Button("Copy"){
-                    let pasteboard = UIPasteboard.general
-                        pasteboard.string = ScanedVal
+                VStack{
+                    HStack{
+                        Text("ScanedVal: \(ScanedVal)")
+                        Spacer()
                     }
-                    
-                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 24))
+                    HStack{
+                        Spacer()
+                        Text("Thai miniQR: \(String(Slip.isValid(iStringData: ScanedVal)))")
+                            .foregroundColor(Slip.isValid(iStringData: ScanedVal) ? .green:.red)
+                        
+                    }
+                    Divider()
+                    HStack{
+                        
+                        Button("Clear"){
+                            ScanedVal=""
+                        }.foregroundColor(.red)
+                        Spacer()
+                        Button("Copy"){
+                            let pasteboard = UIPasteboard.general
+                            pasteboard.string = ScanedVal
+                        }
+                        
+                    }
+                }.padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             }
             ZStack{
                 
@@ -42,9 +54,8 @@ struct QR_Scanner: View {
                     .foregroundColor(Color.white)
                     .opacity(0.6)
                 RoundedRectangle(cornerRadius: 25).stroke(aColor, lineWidth: 4)
-                    .animation(.easeInOut(duration: 0.5), value: aColor)
                     .opacity(aOpacityOn ? 1:0)
-                    
+                    .animation(.easeInOut(duration: 0.5), value: aColor)
                     
                     .padding()
             }
@@ -83,6 +94,6 @@ struct QR_Scanner: View {
 struct QR_Scanner_Previews: PreviewProvider {
     @State var aVal = ""
     static var previews: some View {
-        QR_Scanner(ScanedVal: .constant(""), Debug: true)
+        QR_Scanner(ScanedVal: .constant("00460006000001010301402252020012771igbsB1TkTce2j0X5102TH9104064D"), Debug: true)
     }
 }

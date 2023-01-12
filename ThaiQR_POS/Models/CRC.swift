@@ -17,12 +17,20 @@ class CRC{
 //
     
     static func decode(text: String)->String{
-        
-        return ""
+        return String(crc16(text, Int32(text.count)), radix:16).uppercased()
     }
     
     static func check(text: String, key: String)->Bool{
-        print("CRC text: \(text), key: \(key)")
-        return true
+        //print("DEBUG CRC text: \(text), key: \(key)")
+        var CorrectKey = decode(text: text)
+        while CorrectKey.count < key.count{
+            CorrectKey = "0"+CorrectKey
+        }
+        if (CorrectKey == key) || (CorrectKey == key.uppercased()){
+            return true
+        }
+        else{
+            return false
+        }
     }
 }

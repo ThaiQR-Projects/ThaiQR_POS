@@ -18,7 +18,72 @@ class Slip{
         
         func isPayloadValid(iStringData: String) -> Bool{
             
-            print("Payload: \(iStringData)")
+            //print("DEBUG Payload: \(iStringData)")
+            var pStringData = iStringData
+            
+            //Check sub00 API ID 00 06 000001
+            if(pStringData.count>=4){
+                let aID = pStringData.subString(from: 0, to: 2)
+                if (aID != "00"){
+                    return false
+                }
+                let aLengthStr = pStringData.subString(from: 2, to: 4)
+                if(aLengthStr.isNumber==false){
+                    return false
+                }
+                let aLength = Int(aLengthStr)
+                
+                if(pStringData.count < aLength!+4){
+                    return false
+                }
+                if(pStringData.subString(from: 4, to: aLength!+4) != "000001"){
+                    return false
+                }
+                pStringData = pStringData.subString(from: aLength!+4, to: pStringData.count)
+            }
+            
+            
+            //Check sub01 Sending bank ID
+            if(pStringData.count>=4){
+                let aID = pStringData.subString(from: 0, to: 2)
+                if (aID != "01"){
+                    return false
+                }
+                let aLengthStr = pStringData.subString(from: 2, to: 4)
+                if(aLengthStr != "03"){
+                    return false
+                }
+                if(pStringData.count < 3+4){
+                    return false
+                }
+                let pBankCode = pStringData.subString(from: 4, to: 3+4)
+                if(pBankCode.isNumber == false){
+                    return false
+                }
+                pStringData = pStringData.subString(from: 3+4, to: pStringData.count)
+            }
+            
+            //Check sub03 Transaction Ref ID
+            if(pStringData.count>=4){
+                let aID = pStringData.subString(from: 0, to: 2)
+                if (aID != "02"){
+                    return false
+                }
+                let aLengthStr = pStringData.subString(from: 2, to: 4)
+                if(aLengthStr.isNumber==false){
+                    return false
+                }
+                let aLength = Int(aLengthStr)
+                
+                //Up to 25
+//                if(aLength!>25){
+//                    return false
+//                }
+                
+                if(pStringData.count < aLength!+4){
+                    return false
+                }
+            }
             
             return true
         }
@@ -65,7 +130,7 @@ class Slip{
         }
         
         //Check 91 CRC CRC-16/CCITT-FALSE
-        if(pStringData.count>=2){
+        if(pStringData.count>=4){
             let aID = pStringData.subString(from: 0, to: 2)
             if (aID != "91"){
                 return false
