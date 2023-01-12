@@ -25,6 +25,12 @@ struct Loading_Circle: View {
 
 struct Loading_Circle_Previews: PreviewProvider {
     static var previews: some View {
-        Loading_Circle()
+        Color.gray.opacity(0.3)
+                .ignoresSafeArea()
+                .overlay(
+                    VStack(spacing: 20) {
+                        Loading_Circle()
+                })
+        
     }
 }
