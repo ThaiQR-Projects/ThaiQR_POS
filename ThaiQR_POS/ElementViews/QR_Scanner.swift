@@ -56,8 +56,15 @@ struct QR_Scanner: View {
                     RoundedRectangle(cornerRadius: 25).stroke(aColor, lineWidth: 4)
                         .opacity(aOpacityOn ? 1:0)
                         .animation(.easeInOut(duration: 0.5), value: aColor)
-                    
                         .padding()
+                    
+                    VStack{
+                        HStack{
+                            Spacer()
+                            Circle().opacity(0.8).foregroundColor(aColor).frame(width: 25).animation(.easeInOut(duration: 0.5), value: aColor)
+                        }
+                        Spacer()
+                    }.padding(50)
                 }
                 .onAppear{
                     print("DEBUG: Appere!")
