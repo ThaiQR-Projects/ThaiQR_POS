@@ -17,12 +17,16 @@
 		620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F2D296DB282000CB1F3 /* QR_Generator.swift */; };
 		620D9F32296DB459000CB1F3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 620D9F31296DB459000CB1F3 /* CodeScanner */; };
 		620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F33296DB492000CB1F3 /* QR_Scanner.swift */; };
-		620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F35296DC346000CB1F3 /* AppTester.swift */; };
+		620D9F36296DC346000CB1F3 /* SlipVerifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */; };
 		628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED09296F0E0B004FCEAE /* Slip.swift */; };
 		628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0B296F0E2F004FCEAE /* Extensions.swift */; };
 		628EED0E296F0E48004FCEAE /* CRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0D296F0E48004FCEAE /* CRC.swift */; };
 		628EED13296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c in Sources */ = {isa = PBXBuildFile; fileRef = 628EED12296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c */; };
 		62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */; };
+		62D17C6429719F1500FBB011 /* HomeTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D17C6329719F1500FBB011 /* HomeTapView.swift */; };
+		62D17C682971A7DE00FBB011 /* PaymentRequest_NumPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D17C672971A7DE00FBB011 /* PaymentRequest_NumPad.swift */; };
+		62D17C6A2971B06800FBB011 /* Number_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D17C692971B06800FBB011 /* Number_Button.swift */; };
+		62D17C6C2971B72700FBB011 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D17C6B2971B72700FBB011 /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +60,7 @@
 		620D9F1E296DB078000CB1F3 /* ThaiQR_POSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaiQR_POSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		620D9F2D296DB282000CB1F3 /* QR_Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Generator.swift; sourceTree = "<group>"; };
 		620D9F33296DB492000CB1F3 /* QR_Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Scanner.swift; sourceTree = "<group>"; };
-		620D9F35296DC346000CB1F3 /* AppTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTester.swift; sourceTree = "<group>"; };
+		620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipVerifierView.swift; sourceTree = "<group>"; };
 		620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ThaiQR-POS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		628EED09296F0E0B004FCEAE /* Slip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
 		628EED0B296F0E2F004FCEAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -65,6 +69,10 @@
 		628EED11296F0F30004FCEAE /* CRC-16_CCITT-FALSE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRC-16_CCITT-FALSE.h"; sourceTree = "<group>"; };
 		628EED12296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CRC-16_CCITT-FALSE.c"; sourceTree = "<group>"; };
 		62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_Circle.swift; sourceTree = "<group>"; };
+		62D17C6329719F1500FBB011 /* HomeTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTapView.swift; sourceTree = "<group>"; };
+		62D17C672971A7DE00FBB011 /* PaymentRequest_NumPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequest_NumPad.swift; sourceTree = "<group>"; };
+		62D17C692971B06800FBB011 /* Number_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number_Button.swift; sourceTree = "<group>"; };
+		62D17C6B2971B72700FBB011 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,8 @@
 				620D9F2D296DB282000CB1F3 /* QR_Generator.swift */,
 				620D9F33296DB492000CB1F3 /* QR_Scanner.swift */,
 				62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */,
+				62D17C672971A7DE00FBB011 /* PaymentRequest_NumPad.swift */,
+				62D17C692971B06800FBB011 /* Number_Button.swift */,
 			);
 			path = ElementViews;
 			sourceTree = "<group>";
@@ -166,8 +176,10 @@
 		620D9F2F296DB3A6000CB1F3 /* PageViews */ = {
 			isa = PBXGroup;
 			children = (
-				620D9F35296DC346000CB1F3 /* AppTester.swift */,
+				62D17C6329719F1500FBB011 /* HomeTapView.swift */,
+				620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */,
 				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
+				62D17C6B2971B72700FBB011 /* CalculatorView.swift */,
 			);
 			path = PageViews;
 			sourceTree = "<group>";
@@ -331,15 +343,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */,
+				62D17C6A2971B06800FBB011 /* Number_Button.swift in Sources */,
 				62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */,
 				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
+				62D17C6429719F1500FBB011 /* HomeTapView.swift in Sources */,
 				628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */,
+				62D17C682971A7DE00FBB011 /* PaymentRequest_NumPad.swift in Sources */,
 				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
+				62D17C6C2971B72700FBB011 /* CalculatorView.swift in Sources */,
 				628EED13296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c in Sources */,
 				628EED0E296F0E48004FCEAE /* CRC.swift in Sources */,
 				620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */,
 				620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */,
-				620D9F36296DC346000CB1F3 /* AppTester.swift in Sources */,
+				620D9F36296DC346000CB1F3 /* SlipVerifierView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

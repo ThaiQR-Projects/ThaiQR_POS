@@ -47,7 +47,9 @@ struct QR_Scanner: View {
                 }
                 ZStack{
                     
-                    CodeScannerView(codeTypes: [.qr], scanMode: aScanMode, simulatedData: "This is the simulated data", completion: HandleScan).edgesIgnoringSafeArea(.bottom).onTapGesture(count:5,perform: {Debug = !Debug})
+                    CodeScannerView(codeTypes: [.qr], scanMode: aScanMode, simulatedData: "This is the simulated data", completion: HandleScan)
+                        //.edgesIgnoringSafeArea(.bottom)
+                        .onTapGesture(count:5,perform: {Debug = !Debug})
                     
                     Text("โปรดส่องไปที่สลิป\nเพื่อตรวจสอบ").font(.system(.largeTitle))
                         .multilineTextAlignment(.center)
