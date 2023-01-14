@@ -10,7 +10,10 @@ import SwiftUI
 struct Number_Button: View {
     @State var aText:String
     @State var isTap = false
+    @State var isLarge = false
+    var aSize: CGFloat
     var completion: (String) -> Void
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15).foregroundColor(.gray).opacity(isTap ? 0.2 : 0.3)
@@ -22,7 +25,7 @@ struct Number_Button: View {
                 Text(aText).font(.largeTitle).opacity(isTap ? 0.6 : 1)
             }
             
-        }.frame(width: 70,height: 70)
+        }.frame(width: aSize,height: aSize)
             .onTapGesture {
             isTap = true
             completion(aText)
@@ -31,10 +34,12 @@ struct Number_Button: View {
         
     }
     
-    init(aText: String, isTap: Bool = false, completion: @escaping (String) -> Void) {
+    init(aText: String, isTap: Bool = false, isLarge: Bool = false, completion: @escaping (String) -> Void) {
         self.aText = aText
         self.isTap = isTap
         self.completion = completion
+        self.isLarge = isLarge
+        self.aSize = isLarge ? 100:70
     }
 }
 

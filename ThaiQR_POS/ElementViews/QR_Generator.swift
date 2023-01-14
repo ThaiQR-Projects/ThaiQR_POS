@@ -11,6 +11,7 @@ struct QR_Generator: View {
     @State var QR_String: String
     @State var Size = CGFloat(150)
     @State var Debug = false
+    
     var body: some View {
         VStack{
             Image(uiImage: UIImage(data: getQRCodeDate(text: QR_String)!)!)

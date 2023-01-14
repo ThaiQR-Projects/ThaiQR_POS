@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReceivePaymentView: View {
-    @Environment(\.dynamicTypeSize) var typeSize
+    @Environment(\.horizontalSizeClass) var typeSize
     var body: some View {
         NavigationStack {
             VStack{
@@ -27,14 +27,20 @@ struct ReceivePaymentView: View {
                         GeometryReader { metrics in
                             HStack{
                                 
-                                if(typeSize == .large){
+                                
+                                if(typeSize != .compact){
                                     Spacer()
                                 }
-                                
-                                PaymentRequest_NumPad(completion: {(a:String)->() in
-                                    print("DEBUG: Pressed button :\(a)")
-                                })
-                                if(typeSize == .large){
+                                if(typeSize == .compact){
+                                    PaymentRequest_NumPad(isLarge: false ,completion: {(a:String)->() in
+                                        print("DEBUG: Pressed button :\(a)")
+                                    })
+                                }else{
+                                    PaymentRequest_NumPad(isLarge: true ,completion: {(a:String)->() in
+                                        print("DEBUG: Pressed button :\(a)")
+                                    })
+                                }
+                                if(typeSize != .compact){
                                     Flex_Button(aText:"QR", completion: {(a:String)->() in
                                         print("DEBUG: Pressed button :\(a)")
                                     }).frame(width: metrics.size.width * 0.30)
