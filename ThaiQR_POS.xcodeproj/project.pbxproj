@@ -21,6 +21,10 @@
 		62717AF229729627006CB65F /* ReceivePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF129729627006CB65F /* ReceivePaymentView.swift */; };
 		62717AF429729E0C006CB65F /* Flex_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF329729E0C006CB65F /* Flex_Button.swift */; };
 		62717AF62972CBC0006CB65F /* LogicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF52972CBC0006CB65F /* LogicHelper.swift */; };
+		62717AF82972FD88006CB65F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF72972FD88006CB65F /* Transaction.swift */; };
+		62717AFA2972FFDC006CB65F /* TransactionsHistory_Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF92972FFDC006CB65F /* TransactionsHistory_Table.swift */; };
+		62717AFC29730694006CB65F /* TransactionsHistory_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AFB29730694006CB65F /* TransactionsHistory_TableCell.swift */; };
+		62717AFE2973153C006CB65F /* TransactionsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AFD2973153C006CB65F /* TransactionsHistoryView.swift */; };
 		628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED09296F0E0B004FCEAE /* Slip.swift */; };
 		628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0B296F0E2F004FCEAE /* Extensions.swift */; };
 		628EED0E296F0E48004FCEAE /* CRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0D296F0E48004FCEAE /* CRC.swift */; };
@@ -68,6 +72,10 @@
 		62717AF129729627006CB65F /* ReceivePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivePaymentView.swift; sourceTree = "<group>"; };
 		62717AF329729E0C006CB65F /* Flex_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flex_Button.swift; sourceTree = "<group>"; };
 		62717AF52972CBC0006CB65F /* LogicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicHelper.swift; sourceTree = "<group>"; };
+		62717AF72972FD88006CB65F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		62717AF92972FFDC006CB65F /* TransactionsHistory_Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistory_Table.swift; sourceTree = "<group>"; };
+		62717AFB29730694006CB65F /* TransactionsHistory_TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistory_TableCell.swift; sourceTree = "<group>"; };
+		62717AFD2973153C006CB65F /* TransactionsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryView.swift; sourceTree = "<group>"; };
 		628EED09296F0E0B004FCEAE /* Slip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
 		628EED0B296F0E2F004FCEAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		628EED0D296F0E48004FCEAE /* CRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC.swift; sourceTree = "<group>"; };
@@ -176,6 +184,8 @@
 				62D17C672971A7DE00FBB011 /* PaymentRequest_NumPad.swift */,
 				62D17C692971B06800FBB011 /* Number_Button.swift */,
 				62717AF329729E0C006CB65F /* Flex_Button.swift */,
+				62717AF92972FFDC006CB65F /* TransactionsHistory_Table.swift */,
+				62717AFB29730694006CB65F /* TransactionsHistory_TableCell.swift */,
 			);
 			path = ElementViews;
 			sourceTree = "<group>";
@@ -188,6 +198,7 @@
 				62D17C6B2971B72700FBB011 /* CalculatorView.swift */,
 				62717AF129729627006CB65F /* ReceivePaymentView.swift */,
 				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
+				62717AFD2973153C006CB65F /* TransactionsHistoryView.swift */,
 			);
 			path = PageViews;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 				628EED0B296F0E2F004FCEAE /* Extensions.swift */,
 				628EED0D296F0E48004FCEAE /* CRC.swift */,
 				62717AF52972CBC0006CB65F /* LogicHelper.swift */,
+				62717AF72972FD88006CB65F /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,10 +369,14 @@
 				62CF6DE1296E7E0900F4C038 /* Loading_Circle.swift in Sources */,
 				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
 				62D17C6429719F1500FBB011 /* HomeTapView.swift in Sources */,
+				62717AFE2973153C006CB65F /* TransactionsHistoryView.swift in Sources */,
 				628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */,
+				62717AFA2972FFDC006CB65F /* TransactionsHistory_Table.swift in Sources */,
 				62717AF429729E0C006CB65F /* Flex_Button.swift in Sources */,
+				62717AF82972FD88006CB65F /* Transaction.swift in Sources */,
 				62D17C682971A7DE00FBB011 /* PaymentRequest_NumPad.swift in Sources */,
 				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
+				62717AFC29730694006CB65F /* TransactionsHistory_TableCell.swift in Sources */,
 				62D17C6C2971B72700FBB011 /* CalculatorView.swift in Sources */,
 				628EED13296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c in Sources */,
 				628EED0E296F0E48004FCEAE /* CRC.swift in Sources */,

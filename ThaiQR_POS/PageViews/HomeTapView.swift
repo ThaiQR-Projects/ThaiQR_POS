@@ -22,7 +22,7 @@ struct HomeTapView: View {
                 Label("ตรวจสลิป", systemImage: "creditcard.viewfinder")
                 //qrcode.viewfinder
             }.tag(3)
-            Loading_Circle().badge(0).tabItem {
+            TransactionsHistoryView().badge(0).tabItem {
                 Label("ประวัติรับเงิน", systemImage: "list.bullet.rectangle.fill")
             }.tag(4)
         }
