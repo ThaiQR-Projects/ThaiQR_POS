@@ -18,6 +18,8 @@
 		620D9F32296DB459000CB1F3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 620D9F31296DB459000CB1F3 /* CodeScanner */; };
 		620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F33296DB492000CB1F3 /* QR_Scanner.swift */; };
 		620D9F36296DC346000CB1F3 /* SlipVerifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */; };
+		62717AF229729627006CB65F /* ReceivePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF129729627006CB65F /* ReceivePaymentView.swift */; };
+		62717AF429729E0C006CB65F /* Flex_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62717AF329729E0C006CB65F /* Flex_Button.swift */; };
 		628EED0A296F0E0B004FCEAE /* Slip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED09296F0E0B004FCEAE /* Slip.swift */; };
 		628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0B296F0E2F004FCEAE /* Extensions.swift */; };
 		628EED0E296F0E48004FCEAE /* CRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EED0D296F0E48004FCEAE /* CRC.swift */; };
@@ -62,6 +64,8 @@
 		620D9F33296DB492000CB1F3 /* QR_Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_Scanner.swift; sourceTree = "<group>"; };
 		620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipVerifierView.swift; sourceTree = "<group>"; };
 		620D9F37296DC4B7000CB1F3 /* ThaiQR-POS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ThaiQR-POS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		62717AF129729627006CB65F /* ReceivePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivePaymentView.swift; sourceTree = "<group>"; };
+		62717AF329729E0C006CB65F /* Flex_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flex_Button.swift; sourceTree = "<group>"; };
 		628EED09296F0E0B004FCEAE /* Slip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slip.swift; sourceTree = "<group>"; };
 		628EED0B296F0E2F004FCEAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		628EED0D296F0E48004FCEAE /* CRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				62CF6DE0296E7E0900F4C038 /* Loading_Circle.swift */,
 				62D17C672971A7DE00FBB011 /* PaymentRequest_NumPad.swift */,
 				62D17C692971B06800FBB011 /* Number_Button.swift */,
+				62717AF329729E0C006CB65F /* Flex_Button.swift */,
 			);
 			path = ElementViews;
 			sourceTree = "<group>";
@@ -178,8 +183,9 @@
 			children = (
 				62D17C6329719F1500FBB011 /* HomeTapView.swift */,
 				620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */,
-				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
 				62D17C6B2971B72700FBB011 /* CalculatorView.swift */,
+				62717AF129729627006CB65F /* ReceivePaymentView.swift */,
+				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
 			);
 			path = PageViews;
 			sourceTree = "<group>";
@@ -348,11 +354,13 @@
 				620D9F2E296DB282000CB1F3 /* QR_Generator.swift in Sources */,
 				62D17C6429719F1500FBB011 /* HomeTapView.swift in Sources */,
 				628EED0C296F0E2F004FCEAE /* Extensions.swift in Sources */,
+				62717AF429729E0C006CB65F /* Flex_Button.swift in Sources */,
 				62D17C682971A7DE00FBB011 /* PaymentRequest_NumPad.swift in Sources */,
 				620D9F03296DB076000CB1F3 /* HelloWorldView.swift in Sources */,
 				62D17C6C2971B72700FBB011 /* CalculatorView.swift in Sources */,
 				628EED13296F0F30004FCEAE /* CRC-16_CCITT-FALSE.c in Sources */,
 				628EED0E296F0E48004FCEAE /* CRC.swift in Sources */,
+				62717AF229729627006CB65F /* ReceivePaymentView.swift in Sources */,
 				620D9F01296DB076000CB1F3 /* ThaiQR_POSApp.swift in Sources */,
 				620D9F34296DB492000CB1F3 /* QR_Scanner.swift in Sources */,
 				620D9F36296DC346000CB1F3 /* SlipVerifierView.swift in Sources */,

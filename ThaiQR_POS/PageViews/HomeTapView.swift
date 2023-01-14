@@ -14,12 +14,13 @@ struct HomeTapView: View {
             CalculatorView().badge(0).tabItem {
                 Label("รวมบิล", systemImage: "plusminus.circle.fill")
             }.tag(1)
-            Loading_Circle().badge(0).tabItem {
-                Label("รับเงิน", systemImage: "creditcard.fill")
+            ReceivePaymentView().badge(0).tabItem {
+                Label("เก็บเงิน", systemImage: "creditcard.fill")
                 
             }.tag(2)
             SlipVerifierView().badge(0).tabItem {
                 Label("ตรวจสลิป", systemImage: "creditcard.viewfinder")
+                //qrcode.viewfinder
             }.tag(3)
             Loading_Circle().badge(0).tabItem {
                 Label("ประวัติรับเงิน", systemImage: "list.bullet.rectangle.fill")

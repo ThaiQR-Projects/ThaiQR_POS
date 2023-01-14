@@ -29,6 +29,10 @@ struct ThaiQR_POSApp: App {
 //                print("abc:\(a)")
 //            })
             
+//            PaymentRequest_NumPad(completion: {(a:String)->() in
+//                print("DEBUG: Pressed button :\(a)")
+//            })
+            
             //PaymentRequestInput()
         }
     }
