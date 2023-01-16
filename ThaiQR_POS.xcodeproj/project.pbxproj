@@ -197,8 +197,8 @@
 				620D9F35296DC346000CB1F3 /* SlipVerifierView.swift */,
 				62D17C6B2971B72700FBB011 /* CalculatorView.swift */,
 				62717AF129729627006CB65F /* ReceivePaymentView.swift */,
-				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
 				62717AFD2973153C006CB65F /* TransactionsHistoryView.swift */,
+				620D9F02296DB076000CB1F3 /* HelloWorldView.swift */,
 			);
 			path = PageViews;
 			sourceTree = "<group>";

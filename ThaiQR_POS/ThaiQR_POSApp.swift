@@ -23,7 +23,8 @@ struct ThaiQR_POSApp: App {
             
             HomeTapView()
             
-            //PaymentRequest_NumPad(completion: {print($0)})
+            //ReceivePaymentView(aNum: "")
+            //PaymentRequest_NumPad(isAllowDel: false,completion: {print($0)})
             
 //            PaymentRequest_NumPad(completion: {(a:String)->() in
 //                print("abc:\(a)")

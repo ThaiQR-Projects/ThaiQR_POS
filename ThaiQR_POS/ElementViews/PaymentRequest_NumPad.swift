@@ -41,12 +41,12 @@ struct PaymentRequest_NumPad: View {
 //            completion("aaa")
 //        })
     }
-    public init(isLarge:Bool = false, completion: @escaping (String) -> Void) {
-            print("Init")
-            completion("Init")
-            self.completion = completion
-            self.isLarge = isLarge
-        }
+    public init(completion: @escaping (String) -> Void, isAllowDot: Bool = true, isAllowDel: Bool = true, isLarge: Bool=false) {
+        self.completion = completion
+        self.isAllowDot = isAllowDot
+        self.isAllowDel = isAllowDel
+        self.isLarge = isLarge
+    }
 }
 
 struct PaymentRequest_NumPad_Previews: PreviewProvider {
@@ -55,8 +55,8 @@ struct PaymentRequest_NumPad_Previews: PreviewProvider {
         //PaymentRequest_NumPad(completion: {print($0)})
         
         // Print the pressed button
-        PaymentRequest_NumPad(isLarge: false,completion: {(a:String)->() in
+        PaymentRequest_NumPad(completion: {(a:String)->() in
             print("DEBUG: Pressed button :\(a)")
-        })
+        }, isLarge: false)
     }
 }
