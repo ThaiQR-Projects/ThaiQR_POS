@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QR_Generator: View {
     @State var QR_String: String
-    @State var Size = CGFloat(150)
+    @State var Size = CGFloat(200)
     @State var Debug = false
     
     var body: some View {

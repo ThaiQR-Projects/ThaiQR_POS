@@ -49,7 +49,7 @@ struct ReceivePaymentView: View {
                 }.padding()
             }.navigationTitle("เรียกเก็บเงิน")
                 .navigationDestination(isPresented: $isShowingQRView){
-                    Loading_Circle()
+                    ThaiQRDesign(QR_String: "This QR Code Should contain a content of QR30 reqesting \(aNum) THB to my accont with an CRC")
                 }
         }
     }
@@ -85,7 +85,7 @@ struct ReceivePaymentView: View {
             aNum=""
         }else if(key=="QR"){
             if(Double(aNum) ?? 0>0){
-                var bNum = Double(aNum)
+                let bNum = Double(aNum)
                 aNum=""
                 print("DEBUG: Requesting QR amount:\(bNum!)")
                 isShowingQRView = true

@@ -23,6 +23,7 @@ struct ThaiQR_POSApp: App {
             
             HomeTapView()
             
+            // ThaiQRDesign(QR_String: "eroifjpwlfvijw;fkiswroifgswrkhvobqwednsdklfbhw;fhniasweofuhwpi;fhnwohuf;lesrfowij4prlkweuoh")
             //ReceivePaymentView(aNum: "")
             //PaymentRequest_NumPad(isAllowDel: false,completion: {print($0)})
             
