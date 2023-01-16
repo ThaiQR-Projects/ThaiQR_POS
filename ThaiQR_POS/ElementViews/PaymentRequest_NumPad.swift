@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PaymentRequest_NumPad: View {
     var completion: (String) -> Void //Fuction injections
-    @State var isAllowDot = true
-    @State var isAllowDel = true
+    @Binding var isAllowDot:Bool
+    @Binding var isAllowDel:Bool
     @State var isLarge:Bool
     var body: some View {
         VStack{
@@ -41,15 +41,17 @@ struct PaymentRequest_NumPad: View {
 //            completion("aaa")
 //        })
     }
-    public init(completion: @escaping (String) -> Void, isAllowDot: Bool = true, isAllowDel: Bool = true, isLarge: Bool=false) {
+    public init(completion: @escaping (String) -> Void, isAllowDot:Binding<Bool>, isAllowDel:Binding<Bool>, isLarge: Bool=false) {
         self.completion = completion
-        self.isAllowDot = isAllowDot
-        self.isAllowDel = isAllowDel
+        self._isAllowDot = isAllowDot
+        self._isAllowDel = isAllowDel
         self.isLarge = isLarge
     }
 }
 
 struct PaymentRequest_NumPad_Previews: PreviewProvider {
+    @State static var isAllowDot=true
+    @State static var isAllowDel=false
     static var previews: some View {
         // Print the pressed button
         //PaymentRequest_NumPad(completion: {print($0)})
@@ -57,6 +59,6 @@ struct PaymentRequest_NumPad_Previews: PreviewProvider {
         // Print the pressed button
         PaymentRequest_NumPad(completion: {(a:String)->() in
             print("DEBUG: Pressed button :\(a)")
-        }, isLarge: false)
+        },isAllowDot: $isAllowDot,isAllowDel: $isAllowDel, isLarge: false)
     }
 }

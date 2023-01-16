@@ -33,12 +33,10 @@ struct Flex_Button: View {
         self.aColor = .blue
         self.aImageSystemName = ""
         if(self.aText=="QR"){
-            print(self.aText)
             self.aColor = .green
             self.aImageSystemName = "qrcode"
         }
         if(self.aText=="Clear"){
-            print(self.aText)
             self.aColor = .red
             self.aImageSystemName = "clear"
         }

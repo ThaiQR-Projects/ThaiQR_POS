@@ -10,9 +10,9 @@ import SwiftUI
 struct ReceivePaymentView: View {
     @Environment(\.horizontalSizeClass) var typeSize
     @State var isAllowDot:Bool = true
-    @State var isAllowDel:Bool = true
+    @State var isAllowDel:Bool = false
     @State var aNum:String = ""
-    
+    @State var isShowingQRView:Bool = false
     var body: some View {
         NavigationStack {
             VStack{
@@ -20,9 +20,7 @@ struct ReceivePaymentView: View {
                     GeometryReader { metrics in
                         HStack{
                             
-                            Flex_Button(aText:"Clear", completion: {(a:String)->() in
-                                aNum=""
-                            })
+                            Flex_Button(aText:"Clear", completion: press)
                             Text(verbatim: aNum).font(.largeTitle).frame(width: metrics.size.width * 0.70)
                         }
                     }.frame(height: metrics.size.height * 0.30)
@@ -34,18 +32,14 @@ struct ReceivePaymentView: View {
                                     Spacer()
                                 }
                                 if(typeSize == .compact){
-                                    PaymentRequest_NumPad(completion: press, isAllowDot:isAllowDot, isAllowDel:isAllowDel, isLarge: false)
+                                    PaymentRequest_NumPad(completion: press, isAllowDot:$isAllowDot, isAllowDel:$isAllowDel, isLarge: false)
                                 }else{
-                                    PaymentRequest_NumPad(completion: press, isAllowDot:isAllowDot, isAllowDel:isAllowDel, isLarge: true)
+                                    PaymentRequest_NumPad(completion: press, isAllowDot:$isAllowDot, isAllowDel:$isAllowDel, isLarge: true)
                                 }
                                 if(typeSize != .compact){
-                                    Flex_Button(aText:"QR", completion: {(a:String)->() in
-                                        print("DEBUG: Pressed button :\(a)")
-                                    }).frame(width: metrics.size.width * 0.30)
+                                    Flex_Button(aText:"QR", completion: press).frame(width: metrics.size.width * 0.30).disabled(!(Double(aNum) ?? 0>0)).opacity(Double(aNum) ?? 0>0 ? 1:0.6)
                                 }else{
-                                    Flex_Button(aText:"QR", completion: {(a:String)->() in
-                                        print("DEBUG: Pressed button :\(a)")
-                                    })
+                                    Flex_Button(aText:"QR", completion: press).disabled(!(Double(aNum) ?? 0>0)).opacity(Double(aNum) ?? 0>0 ? 1:0.6)
                                 }
                                 
                             }}.frame(height: metrics.size.height * 0.70)
@@ -54,22 +48,50 @@ struct ReceivePaymentView: View {
                     
                 }.padding()
             }.navigationTitle("เรียกเก็บเงิน")
-            // \(isAllowDel ? "true":"false")
+                .navigationDestination(isPresented: $isShowingQRView){
+                    Loading_Circle()
+                }
         }
     }
     
-    init(isAllowDot: Bool = true, isAllowDel: Bool = true, aNum: String = "") {
-        
+    
+    init(isAllowDot: Bool = true, isAllowDel: Bool = false, aNum: String = "") {
         self.isAllowDot = isAllowDot
         self.isAllowDel = isAllowDel
         self.aNum = aNum
-        
-        
     }
     
-    func press(key:String){
+    func updateAllowanceDotDel(){
         
-        if(key=="."){
+        if(aNum=="0"){
+            aNum = ""
+        }
+        
+        if(aNum.contains(".")){
+            isAllowDot = false
+        }else{
+            isAllowDot = true
+        }
+        if(aNum != ""){
+            isAllowDel=true
+        }else{
+            isAllowDel=false
+        }
+    }
+    
+    
+    func press(key:String){
+        if(key=="Clear"){
+            aNum=""
+        }else if(key=="QR"){
+            if(Double(aNum) ?? 0>0){
+                var bNum = Double(aNum)
+                aNum=""
+                print("DEBUG: Requesting QR amount:\(bNum!)")
+                isShowingQRView = true
+            }
+        }
+        else if(key=="."){
             if(!aNum.contains(".")){
                 if(aNum == ""){
                     aNum = "0."
@@ -92,11 +114,12 @@ struct ReceivePaymentView: View {
                 aNum = aNum+key
             }
         }
+        updateAllowanceDotDel()
+        print("DEBUG F1: \(aNum) key:\(key)")
         
-        print("DEBUG F1: \(aNum) key:\(key) isAllowDel:\(isAllowDel)")
-        isAllowDel = false
         
     }
+    
 }
 
 struct ReceivePayment_Previews: PreviewProvider {
